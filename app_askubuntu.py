@@ -21,11 +21,9 @@ def get_question_urls(section_url):
 				yield item['href']
 		except Exception as e:
 			print(traceback.format_exc())
-
 		
 
 def get_related_data_to_question(ques_url):
-	pdb.set_trace()
 	html = urlopen(QUESTIONS_BASE_URL + ques_url)
 	soup = BeautifulSoup(html, "lxml")
 	
